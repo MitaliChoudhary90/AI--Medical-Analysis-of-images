@@ -6,7 +6,7 @@ import google.generativeai as genai     # to allow interaction with gemini ai mo
 # configure google gemini api by setting up api key. This will allow us to connect us to 
 # ai model and generate insights from medical images
 
-genai.configure(api_key="AIzaSyBNtvuAgt89MuEDZSGme9pc1J_P_CpIuNk")
+genai.configure(api_key="YOUR_API_KEY")
 
 #setting up the system prompt which defines the role of the AI Model
 # the prompt specifies that our AI is a medical image analysis system capable of
@@ -102,5 +102,6 @@ if submit_button:
     #generate a response based on prompt and image
     response=model.generate_content(prompt_parts)
     print(response.text)
+
 
     st.write(response.text)
